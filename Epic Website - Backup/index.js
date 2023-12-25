@@ -4,16 +4,12 @@ const TOOCLOSE = 100
 // If there is a problem use : console.log(x, y)
 
 
-
-
-
 badbutton.addEventListener('click', () => {
 
     // Guess he found out that he can TAB Lmao
     alert('Good one :/')
     window.location.href = 'Website.htm';
 })
-
 function distancefrombuttoncenter(boxPosition, mousePosition, boxSize){
 
     //EZ : Calc distance of mouse and Button
@@ -42,24 +38,7 @@ document.addEventListener('mousemove', (e) => {
             buttonBox.y + vmove / vdistance * 10,
         )
     }
-    const px = e.clientX;
-    const py = e.clientY;
-
-// MOVE!
-front.style.transform = `
-    translate(
-        ${px / sfront}%,
-        ${py / sfront}%
-    )`;
-
-back.style.transform = `
-    translate(
-        ${px / sback}%,
-        ${py / sback}%
-    )`;
-
 })
-
 function setButtonPosition(left , top){
     const windowBox = document.body.getBoundingClientRect()
     const buttonBox = badbutton.getBoundingClientRect()
@@ -84,36 +63,3 @@ function setButtonPosition(left , top){
 
 }
 
-// Parallax EFFECT
-
-const parallax = document.querySelector('.parallax');
-const front = document.querySelector('.front');
-const back = document.querySelector('.back');
-
-// sensitivity
-const sfront = 150;
-const sback = 400;
-
-//catching movement
-parallax.addEventListener('mousemove', e => {
-
-
-});
-
-//Timer !!
-
-const startTime = new Date().getTime();
-function updateElapsedTime() {
-
-    const currentTime = new Date().getTime();
-    const elapsedTime = currentTime - startTime;
-    const elapsedSeconds = Math.floor(elapsedTime / 1000);
-
-    document.getElementById('elapsedTime').innerText = `${elapsedSeconds} seconds`;
-}
-
-setInterval(updateElapsedTime, 1000);
-
-window.addEventListener('beforeunload', () => {
-    updateElapsedTime();
-});

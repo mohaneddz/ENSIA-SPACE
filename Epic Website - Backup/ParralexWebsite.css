@@ -1,45 +1,13 @@
 body{
-    
-    /* Colors  */
-    min-height: 100vh;
-    background: linear-gradient(rgb(54, 102, 156), rgb(37, 163, 157));
-    position: relative;
-    overflow: hidden;
-
-    margin: 0px;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-}
-#notouching{
-    
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 5px black;
-    background-color: #d7e0e2;
-    border: solid rgb(0, 0, 0);
-    border-radius: 5px;
-    box-shadow: 5px 5px 25px;
-    position: absolute;
-    white-space: nowrap;
-    font-size: 2rem;
-
 }
 
 .parallax{
-
-    padding-left: 550px;
-    padding-top: 450px;
-    height: 100vh;
     min-height: 100vh;
-}
-.parallax p{
-    
-    padding-left: 100px;
-    color: white;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: large;
+    background: linear-gradient(rgb(109, 125, 196), rgb(20, 25, 102));
+    position: relative;
+    overflow: hidden;
 }
 
 .front ,.back{
@@ -56,8 +24,7 @@ body{
     z-index: 1;
 }
 .front img{
-    box-shadow: 5px 5px 20px black;
-    /* box-shadow: -5px -5px 20px black; */
+    box-shadow: 0 1 1.5rgba(0,0,0,0.5);
     max-width: 300px;
     border-radius: 10px;
 
@@ -74,7 +41,7 @@ body{
 }
 .back img,.front img{
     position: absolute;
-    filter: blur(0px)
+    filter: blur(0.7px)
 
 }
 

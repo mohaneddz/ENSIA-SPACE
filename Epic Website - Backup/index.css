@@ -1,0 +1,38 @@
+body{
+    
+    /* Colors  */
+    background: rgb(63,94,251);
+    background: -moz-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,202,252,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,202,252,1) 100%);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,202,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#46cafc",GradientType=1);
+
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#notouching{
+    
+    color: darkblue;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 5px black;
+    background-color: #98a6ee;
+    border: solid rgb(59, 59, 146);
+    border-radius: 15px;
+    box-shadow: 5px 5px 25px;
+    position: absolute;
+    white-space: nowrap;
+    font-size: 2rem;
+
+
+}
+
+/* Centered */
+#start{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
