@@ -91,8 +91,8 @@ const front = document.querySelector('.front');
 const back = document.querySelector('.back');
 
 // sensitivity
-const sfront = 150;
-const sback = 400;
+const sfront = 200;
+const sback = 500;
 
 //catching movement
 parallax.addEventListener('mousemove', e => {

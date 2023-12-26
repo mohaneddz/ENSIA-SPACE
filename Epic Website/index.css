@@ -1,8 +1,7 @@
 body{
     
     /* Colors  */
-    min-height: 100vh;
-    background: linear-gradient(rgb(54, 102, 156), rgb(37, 163, 157));
+    background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
     position: relative;
     overflow: hidden;
 
@@ -56,9 +55,9 @@ body{
     z-index: 1;
 }
 .front img{
-    box-shadow: 5px 5px 20px black;
+    filter: drop-shadow(20px 20px 20px black) ;
     /* box-shadow: -5px -5px 20px black; */
-    max-width: 300px;
+    max-width: 500PX;
     border-radius: 10px;
 
 }
@@ -68,13 +67,15 @@ body{
 }
 .back img{
     box-shadow: 0 1 1.5rgba(0,0,0,0.5);
-    max-width: 400px;
+    max-width: 450px;
     border-radius: 10px;
 
 }
 .back img,.front img{
     position: absolute;
-    filter: blur(0px)
+    filter: blur(0px);
+    opacity: 0;
+    animation: fadeIn calc(var(--order) * 1000ms) forwards;
 
 }
 
@@ -82,45 +83,61 @@ body{
 /* Placement TOP ------------------------------------*/
 
 .front img:nth-child(1){
-    top: 0%;
-    left: 15%;
+    top: 20%;
+    left: -2%;
     width: 100%;
 }
 .front img:nth-child(2){
-    top: 50%;
-    left: 01%;
-    width: 50%;
+    top: 60%;
+    left: -5%;
+    width: 100%;
 }
 .front img:nth-child(3){
-    bottom: 0;
+    bottom: 30%;
     left: 55%;
-    width: 15%;
+    width: 40%;
 }
 .front img:nth-child(4){
-    bottom: 28%;
-    right: 2%;
-    width: 13%;
+    bottom: 70%;
+    right: 60%;
+    width: 20%;
 }
 .front img:nth-child(5){
     top: 15%;
     right: 10%;
-    width: 50%;
+    width: 70%;
 }
 
 /* Placement BOT ------------------------------------*/
 
 .back img:nth-child(1){
-    top: 3%;
-    left: 3%;
+    top: 0%;
+    left: -2%;
     width: 100%;
 }
 .back img:nth-child(2){
     top: 0%;
-    right: 20%;
-    width: 30%;
+    right: 10%;
+    width: 80%;
 }
 .back img:nth-child(3){
-    bottom: 5%;
-    right: 7%;
+    bottom: 1%;
+    left: 10%;
     width: 33%;
+}
+.back img:nth-child(4){
+    bottom: 1%;
+    right: 02%;
+    width: 33%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

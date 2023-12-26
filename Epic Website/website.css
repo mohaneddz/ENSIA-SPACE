@@ -1,6 +1,18 @@
 body{
     
     /* Colors  */
+    animation: starting;
+    animation-duration: 1s;
+    animation-timing-function: linear;
     min-height: 100vh;
-    background: linear-gradient(rgb(54, 102, 156), rgb(37, 163, 157));
+    background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
+
+}
+
+@keyframes starting{
+
+    100%{
+        background:  rgb(23, 63, 150);
+
+    }
 }
