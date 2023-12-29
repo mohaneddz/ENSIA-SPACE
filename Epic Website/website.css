@@ -1,18 +1,332 @@
-body{
-    
-    /* Colors  */
-    animation: starting;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    min-height: 100vh;
-    background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
 
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+
+}
+body{
+    overflow: hidden;
+    animation: starting;
+    animation-duration: 3s;
+    background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
+    width: 100%;
+    height: 100vh;
+    text-shadow: 2px 2px 5px black;
+}
+body #genZ{
+    position: absolute;
+    z-index: 3;
+    animation: rainbow 5s linear ;
+    animation-iteration-count: infinite;
+
+    width: 100%;
+    height: 100vh;
+}
+table{
+    z-index: 3;
+}
+p{
+    z-index: 3;
+}
+
+.navbar{
+    width: 85%;
+    margin-left: 150px;
+    margin-top: 0px;
+    padding: 0px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.navbar img{
+
+    margin-top: -20px;
+    padding-top: 0px;
+    width : 100px; 
+    cursor: pointer;
+    position: absolute;
+}
+.navbar ul {
+    list-style: none;
+
+}
+.navbar ul li{
+    padding-top: 20px;
+    display: inline-block;
+    margin: 0px 56px;
+    position: relative;
+
+
+}
+.navbar ul a{
+    color: white;
+    text-decoration: none;
+}
+
+/* What comes after each list item , because it's vertical , we will get SPACE UNDER ITEMS!! */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: paleturquoise;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/* THE WELCOMING MESSAGE + THE LOGIN FORUM */
+
+.welcome {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-150%);
+    text-align: center;
+    color: white;
+}
+.login {
+    width: 100%;
+    position: absolute;
+    top: 75%;
+    transform: translateY(-150%);
+    text-align: center;
+    color: black;
+    background-color: transparent;
+}
+table {
+    width: 30%;
+    height: 20vh;
+    color: white;
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    box-shadow: 2px 2px 15px black;
+}
+th {
+    border: 1px solid #ffffff;
+}
+.welcome p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+/* THE LEFT SIDEBAR! */
+
+
+.left {
+    z-index: 1;
+    list-style: none;
+    top: 0%;
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    background-color: white;
+    transition: 0.5s ease;
+    overflow: auto; 
+    border: 1px solid #ccc;
+    transform: translateX(-250px);
+}
+.left h1{
+
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: rgb(1, 20, 82);
+    font-weight: 800;
+    text-align: right;
+    padding-right: 20%;
+    padding-top: 0%;
+    pointer-events: none;
+}
+.left #menu{
+    padding-right: 70px;
+    padding-top: 17px;
+    padding-bottom: 0px;
+}
+.left ul li{
+    height: 50px;
+}
+.left ul li a{
+    text-shadow: 0px 0px;
+    color: rgb(31, 16, 112);
+    font-weight: 500;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    transition: 0.75s ease-out;
+}
+.left ul li a i{
+    width: 40px;
+    text-align: center;
+}
+.left ul li:hover {
+    color: white;
+    background-color: blue;
+}
+.left ul li a img{
+    display: inline;
+    float: left;
+    margin-top: -10px;
+}
+
+/* Toggle Button */
+
+#slide{
+    display: none;
+    visibility: hidden;
+}
+.left_toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    left: 15px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.425);
+
+}
+.left_toggle .common{
+    
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: rgb(0, 2, 128);
+    border-radius: 50px;
+    transition: 0.3s ease;
+
+}
+
+/* Toggle Button Lines */
+
+.left_toggle .top_line{
+
+    top:30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.left_toggle .middle_line{
+
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.left_toggle .bot_line{
+
+    top:70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animation When Clicked ! */
+input:checked ~ .left_toggle .top_line{
+
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+
+}
+input:checked ~ .left_toggle .bot_line{
+
+    left: 2px;
+    top: 14px;
+    width: 25px;
+    transform: rotate(-45deg);
+
+}
+input:checked ~ .left_toggle .middle_line{
+
+    opacity: 0;
+    transform: translateX(20px);
+
+}
+input:checked ~ .left{
+    transform: translateX(0);
+    box-shadow: 0 0 15px black;
+}
+
+/* GEN Z EASTER EGG */
+
+video{
+    position: absolute;
+    filter: drop-shadow(2px 2px 5px black) ;
+
+}
+.vid1{
+    z-index: 0;
+    right: 0%;
+    bottom: 10%;
+    height: 30vh;
+    width: 500px;
+}
+.vid2 {
+    z-index: 0;
+    left: -20%;
+    height: 70vh;
+    width: 1000px;
+}
+.vid3 {
+    z-index: 0;
+    left: 0%;
+    bottom: -15%;
+    height: 400px;
+    width: 1000px;
+}
+
+.vid4{
+    z-index: 0;
+    left: 50%;
+    top: 0%;
+    height: 400px;
+    width: 1000px;
+}
+.vid5{
+    position: absolute;
+    z-index: 0;
+    left: 70%;
+    top: 0%;
+    height: 400px;
+    width: 500px;
+}
+
+footer a {
+    position: absolute;
+    bottom: 0%;
+    right: 45%;
+    color: white;
 }
 
 @keyframes starting{
 
-    100%{
-        background:  rgb(23, 63, 150);
-
+    0%{
+        opacity: 0%;
     }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes rainbow{
+
+    0%{background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197))}
+    20%{background: linear-gradient(rgb(59, 31, 82), rgb(153, 40, 175))}
+    40%{background: linear-gradient(rgb(100, 35, 46), rgb(224, 40, 55))}
+    60%{background: linear-gradient(rgb(134, 105, 23), rgb(245, 248, 74))}
+    80%{background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197))}
+    100%{background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197))}
+
+
 }

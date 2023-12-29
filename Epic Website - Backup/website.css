@@ -1,9 +1,0 @@
-body{
-    
-    /* Colors  */
-    background: rgb(63,94,251);
-    background: -moz-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,202,252,1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,202,252,1) 100%);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,202,252,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#46cafc",GradientType=1);
-}

@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="ENSIA Student Home">
+    <meta name="keywords" content="Buisness, E-commerce, ENSIA">
+    <meta name="author" content="Mohaned Serine">
+    <meta name="viewpoint" content="width=device-width">
+    <title>Introduction</title>
+    <link rel="icon" href="../Images/icon.png">
     <link rel="stylesheet" href="index.css">
     <script defer src="index.js"></script>
+    <script defer src="music.js"></script>
 
 
 </head>
 <body>
 
+    <audio id="music" loop>
+        <source src="../Audio/speedrun.mp3" type="audio/mp3">
+    </audio>
  
     <div class="front">
     
@@ -20,8 +29,7 @@
         <img id="img" src="/Images/CLOUD (3).png" alt="CLOUD PICTURE" style="--order : 5">
         <img id="img" src="/Images/CLOUD (4).png" alt="CLOUD PICTURE" style="--order : 2">
         <img id="img" src="/Images/CLOUD (5).png" alt="CLOUD PICTURE" style="--order : 3">
-    
-    
+        
     </div>
     <div class="back">
     
@@ -30,11 +38,9 @@
         <img id="img" src="/Images/CLOUD (8).png" alt="CLOUD PICTURE" style="--order : 5">
         <img id="img" src="/Images/CLOUD (9).png" alt="CLOUD PICTURE" style="--order : 2">
 
-        
     </div>
     
 </section>
-
 
 <section class ="parallax">
     
@@ -43,12 +49,12 @@
             Click To Procceed!
         </button>
     </div>
-    <u style="color: aliceblue;"> 
-        <p id="timer"><span id="elapsedTime"></span></p>
+
+    <u style="cursor: pointer; color: aliceblue; "> 
+        <p id="play" ><span id="elapsedTime"></span></p>
     </u>
     
 </section>
-
 
 
 </body>

@@ -5,8 +5,6 @@ const TOOCLOSE = 100
 
 
 
-
-
 badbutton.addEventListener('click', () => {
 
     // Guess he found out that he can TAB Lmao

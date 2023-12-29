@@ -2,12 +2,12 @@ body{
     
     /* Colors  */
     background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
-    position: relative;
     overflow: hidden;
 
     margin: 0px;
     width: 100vw;
     height: 100vh;
+    background-position: center;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
