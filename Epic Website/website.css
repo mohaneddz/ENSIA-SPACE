@@ -7,23 +7,28 @@
     font-family: 'Poppins',sans-serif;
 
 }
-body{
+
+body {
     overflow: hidden;
     animation: starting;
     animation-duration: 3s;
     background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
     width: 100%;
     height: 100vh;
-    text-shadow: 2px 2px 5px rgb(29, 50, 75);
+    text-shadow: 2px 2px 5px rgb(5, 7, 10);
+    
 }
+
+
 body #genZ{
     position: absolute;
     z-index: 3;
-    animation: rainbow 5s linear ;
+    animation: rainbow 1s; 
     animation-iteration-count: infinite;
-
     width: 100%;
     height: 100vh;
+
+    
 }
 table{
     z-index: 3;
@@ -92,10 +97,16 @@ p{
     top: 50%;
     transform: translateY(-150%);
     text-align: center;
-    animation: rainbowtext 5s infinite;
-
+    color: white;
+    
     
 }
+#text {
+    animation: rainbowtext 0.5s infinite;
+    text-shadow: 2px 2px 5px rgb(5, 7, 10);
+    
+}
+
 .login {
     width: 100%;
     position: absolute;
