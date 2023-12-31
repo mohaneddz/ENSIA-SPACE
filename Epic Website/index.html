@@ -18,13 +18,14 @@
 </head>
 <body>
 
+
     <audio id="music" loop>
         <source src="../Audio/speedrun.mp3" type="audio/mp3">
     </audio>
  
     <div class="front">
     
-        <img id="img" src="/Images/CLOUD (1).png" alt="CLOUD PICTURE" style="--order : 5">
+        <img id="img" src="/Images/CLOUD (1).png" alt="CLOUD PICTURE" style="--order : ">
         <img id="img" src="/Images/CLOUD (2).png" alt="CLOUD PICTURE" style="--order : 4">
         <img id="img" src="/Images/CLOUD (3).png" alt="CLOUD PICTURE" style="--order : 5">
         <img id="img" src="/Images/CLOUD (4).png" alt="CLOUD PICTURE" style="--order : 2">
@@ -40,22 +41,20 @@
 
     </div>
     
-</section>
 
-<section class ="parallax">
+    <section class ="parallax">
+        
+        <div id="start">
+            <button id="notouching" >
+                Click To Procceed
+            </button>
+        </div>
+
+        <u style="cursor: pointer; color: aliceblue; "> 
+            <p id="play" ><span id="elapsedTime"></span> Speedrun</p>
+        </u>
     
-    <div id="start">
-        <button id="notouching" >
-            Click To Procceed!
-        </button>
-    </div>
-
-    <u style="cursor: pointer; color: aliceblue; "> 
-        <p id="play" ><span id="elapsedTime"></span></p>
-    </u>
-    
-</section>
-
+    </section>
 
 </body>
 </html>

@@ -14,7 +14,7 @@ body{
     background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
     width: 100%;
     height: 100vh;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px rgb(29, 50, 75);
 }
 body #genZ{
     position: absolute;
@@ -44,6 +44,7 @@ p{
 }
 .navbar img{
 
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
     margin-top: -20px;
     padding-top: 0px;
     width : 100px; 
@@ -91,7 +92,9 @@ p{
     top: 50%;
     transform: translateY(-150%);
     text-align: center;
-    color: white;
+    animation: rainbowtext 5s infinite;
+
+    
 }
 .login {
     width: 100%;
@@ -121,7 +124,6 @@ th {
 }
 
 /* THE LEFT SIDEBAR! */
-
 
 .left {
     z-index: 1;
@@ -194,7 +196,7 @@ th {
     z-index: 2;
     cursor: pointer;
     border-radius: 2px;
-    background-color: rgba(255, 255, 255, 0.425);
+    background-color: rgb(255, 255, 255);
 
 }
 .left_toggle .common{
@@ -262,6 +264,8 @@ input:checked ~ .left{
 video{
     position: absolute;
     filter: drop-shadow(2px 2px 5px black) ;
+    animation: shaking2 5s infinite;
+
 
 }
 .vid1{
@@ -291,6 +295,7 @@ video{
     top: 0%;
     height: 400px;
     width: 1000px;
+
 }
 .vid5{
     position: absolute;
@@ -299,7 +304,15 @@ video{
     top: 0%;
     height: 400px;
     width: 500px;
+    filter: drop-shadow(0 0 30px white);
 }
+#cringe:hover {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease-in-out;
+    animation: shaking 5s infinite;
+
+}
+
 
 footer a {
     position: absolute;
@@ -328,5 +341,37 @@ footer a {
     80%{background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197))}
     100%{background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197))}
 
+}
+@keyframes rainbowtext{
 
+    0%{color: rgb(23, 63, 150)}
+    20%{color: rgb(59, 31, 82)}
+    40%{color: rgb(100, 35, 46)}
+    60%{color:rgb(134, 105, 23)}
+    80%{color: rgb(23, 63, 150)}
+    100%{color: rgb(23, 63, 150)}
+
+}
+
+@keyframes shaking {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-20px, -20px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translate(30px, 30px);
+    }
+}
+@keyframes shaking2 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(10px, -10px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translate(-10px, 10px);
+    }
 }

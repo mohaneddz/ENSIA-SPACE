@@ -1,18 +1,29 @@
 body{
-    
-    /* Colors  */
-    background: linear-gradient(rgb(23, 63, 150), rgb(51, 131, 197));
+
     overflow: hidden;
+    /* animation : turning_red 3s; */
+    animation-timing-function: ease-in ;
 
     margin: 0px;
     width: 100vw;
     height: 100vh;
+
     background-position: center;
     overflow: hidden;
     font-family: Arial, Helvetica, sans-serif;
+    animation: turning_red 100s cubic-bezier(0.42, 0, 0.58, 1) ;
+
 }
+section{
+
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(#961717, rgb(197, 51, 51));
+}
+
+
 #notouching{
-    
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px 5px black;
@@ -23,9 +34,21 @@ body{
     position: absolute;
     white-space: nowrap;
     font-size: 2rem;
+    z-index: 2;
 
 }
 
+#play{
+    text-shadow: 0 0 5px black;
+}
+u  #play:hover{
+    color: rgb(29, 131, 55);
+    text-decoration: underline;
+    text-decoration-color :rgb(29, 131, 55);
+    animation-name: shaking ;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
 .parallax{
 
     padding-left: 550px;
@@ -35,35 +58,39 @@ body{
 }
 .parallax p{
     
-    padding-left: 100px;
+    padding-left: 50px;
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
 }
 
 .front ,.back{
+    
+    filter: brightness(30%);
     position: absolute;
     top: 0;
     left: 0;
     pointer-events: none;
     height: 100%;
     width: 100%;
+    animation: cloudy 100s cubic-bezier(0.42, 0, 0.58, 1) ;
 
 }
 
 .front{
-    z-index: 1;
+    z-index: 3;
 }
 .front img{
+    
     filter: drop-shadow(20px 20px 20px black) ;
-    /* box-shadow: -5px -5px 20px black; */
     max-width: 500PX;
     border-radius: 10px;
+    
 
 }
 
 .back{
-    z-index: 0;
+    z-index: 1;
 }
 .back img{
     box-shadow: 0 1 1.5rgba(0,0,0,0.5);
@@ -74,7 +101,7 @@ body{
 .back img,.front img{
     position: absolute;
     filter: blur(0px);
-    opacity: 0;
+    /* opacity: 0; */
     animation: fadeIn calc(var(--order) * 1000ms) forwards;
 
 }
@@ -140,4 +167,32 @@ body{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes turning_red{
+
+    0%{filter : hue-rotate(-140deg)
+    }
+    /* 50%{
+        filter : hue-rotate(0deg)
+
+    } */
+    100% {
+        background: linear-gradient(#961717, rgb(197, 51, 51));
+    }
+
+
+}
+@keyframes shaking {
+
+    50%{transform: scale(1, 1.2)}
+    100%{transform: translateY(9)
+    }
+    
+
+}
+@keyframes cloudy {
+    0%{ 
+        filter: brightness(100%);}
+    100%{ filter: brightness(30%);}
 }
