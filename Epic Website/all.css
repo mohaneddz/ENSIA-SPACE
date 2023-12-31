@@ -9,6 +9,9 @@ body{
     text-shadow: 2px 2px 5px black;
     color: white;
 }
+
+
+/* Websites Gallery Layout */
 .Gallery{
     display: flex;
     height: 20rem;
@@ -26,7 +29,7 @@ body{
     flex: 5;
 }
 .home:hover{
-
+    text-shadow: 0 0 5px white;
     color: rgb(238, 224, 162);
     font-size: 1.2em;   
 }
@@ -36,6 +39,59 @@ pre{
     align-items: center;
     justify-content: center;
     
+}
+
+
+/* FeedBack Website */
+#bugged { 
+    color: red;
+    font-size : 90px;
+}
+#bugged del:hover {
+    display: inline-block;
+    cursor: pointer;
+    transform: translate(-300%);
+
+}
+#feature {
+    color: aliceblue;
+    font-size: 100px;
+    text-decoration: none;
+    color: rgb(94, 196, 157);
+    font-size: 250px;
+    font-family: 'Freehand', cursive;
+}
+
+/* Make IT WORSE */
+#feature:hover {
+    background-color: red;
+    text-decoration: none;
+    color: rgb(219, 221, 73);
+    font-size: 350px;
+    font-family: 'Freehand', cursive;
+
+}
+
+/* About us */
+#error:hover{
+    text-shadow: 0 0 5px white;
+    color: rgb(157, 199, 238);
+}
+#warning:hover{
+    font-size: 105%;
+}
+
+#service{
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Services  */
+#service:hover{
+    text-shadow: 0 0 5px rgb(42, 37, 61);
+    color: rgb(132, 132, 214);
 }
 
 @keyframes starting{
