@@ -67,7 +67,7 @@ pre{
     background-color: red;
     text-decoration: none;
     color: rgb(94, 196, 157);
-    font-size: 180px;
+    font-size: 350px;
     font-family: 'Freehand', cursive;
 
 }
@@ -81,6 +81,18 @@ pre{
     font-size: 105%;
 }
 
+#service{
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Services  */
+#service:hover{
+    text-shadow: 0 0 5px rgb(42, 37, 61);
+    color: rgb(132, 132, 214);
+}
 
 @keyframes starting{
 
