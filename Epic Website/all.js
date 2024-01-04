@@ -3,3 +3,4 @@ function playsound(audioname){
     audio.play();
 }
 playsound("../Audio/NormalSong.mp3");
+

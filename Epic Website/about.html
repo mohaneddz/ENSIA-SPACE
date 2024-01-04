@@ -14,38 +14,145 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="all.css">
 </head>
-<body>
+<body id="About">
 
     <br>
     <br>
     <br>
+    
+    
+    <center id="text">
 
-    <center>
-            <a href="Website.htm" style="text-decoration: none; color: rgb(90, 162, 230);font-size: 50px;" >
-                <h1 id="error">Error 404 </h1>
-            </a>
-            <div style="font-size: 40px; margin-left: 0px;" >
+
+        <a href="Website.htm" style="text-decoration: none; color: rgb(90, 162, 230);font-size: 50px;" >
+            <h1 id="error">Error 404 </h1>
+        </a>
+
+        <div style="font-size: 40px; margin-left: 0px;" >
             Just Kidding I know it was not funny, This ENSIA Site Was made by me : <br>
             <span style="font-size: 35px ; color: rgb(100, 189, 159);">Mohaned Manaa </span>
-            , I mean, you already you know me so is kinda cringe ...<br> 
-            Yeah Serine Helped As well, I guess? , I dunno I'm writing from the past. 
+            , I mean, you already know me , let's not get too formal ...<br> 
+            In this Digital space you can find all your favourite links , sites & colleges.
             <br><span style="font-size: 25px;"> 
-            So anyway have a good day, don't do drugs, always bet on HAKARI
-            and JavaScript. ITE good , math bad <br> It's 2 AM , gotta sleep cya... 
+            anyway have a good day, don't do drugs, always bet on HAKARI
+            & JavaScript. ITE's good , math's bad <br>
             </span>
 
 
             <br><br><br><br><br>
 
 
-        <span style=" font-size: 15px;">oh and 
+        <span style=" font-size: 15px;" id="warning">oh and 
     
-    <a href="Website.htm" style="color: red; text-decoration: none ;" id="warning">Don't Click on the Main Footer at any Cost! <a></span>
-        </div>
+    <a href="Website.htm" style="color: red; text-decoration: none ;" id="warning">Don't Click on the Main Footer at any Cost! </a></span>
+    </div>
+    </center>
 
-        <audio src="../Audio/box.mp3" loop id="music" autoplay></audio>
+    <!-- -------------------------------GIFS------------------------------- -->
+
+
+    <img id="jump" src="../images/foxy.gif" alt="Foxy GIF" >
+    <img id="crash" src="../images/crash.gif" alt="Crashing" >
+    <img id="black" src="../images/black.jpg" alt="Black Screen" >
+    
+
+
+    <!-- -------------------------------Audios------------------------------- -->
+
+
+    <audio src="../Audio/box.mp3" loop id="music" autoplay></audio>
+
+    <audio id="scare" >
+        <source src="../Audio/foxy.mp3" type="audio/mp3" >
+    </audio>
+    <audio id="glitch" >
+        <source src="../Audio/glitch.mp3" type="audio/mp3" >
+    </audio>
+
+    <button id="Flashlight" style="display: none;" onclick="playGifAndSound()" >Turn On The Flashlight</button>
+    
+    <!-- -------------------------------Scripts To Organize------------------------------- -->
+
+    <script>
+
+        // Everything Is timed "Correctly" 👌
+
+        setTimeout(function() {
+            // Show the button :
+            var myButton = document.getElementById('Flashlight');
+            myButton.style.display = 'block';
+
+            // Stop the music Box
+            var myAudio = document.getElementById('music');
+            myAudio.pause();
+        }, 21500);
+
+
+        function playGifAndSound() {
+
+            
+            // Hide the Button
+            var flashy = document.getElementById('Flashlight')
+            flashy.style.display = 'none';
+
+  
+
+            // Show FOXY
+            var myGif = document.getElementById('jump');
+            myGif.style.display = 'block';
+
+            setTimeout(function(){
+
+                // Play THE JUMPSCARE
+                var myAudio = document.getElementById('scare');
+                myAudio.play();
+                
+            },120)
+
+            setTimeout(function(){
+
+
+            // Hide FOXY
+                var myGif = document.getElementById('jump');
+                myGif.style.display = 'none';
+                
+            },800)
+
+
+            setTimeout(function(){
+
+                // Show Crashing Screen
+                var screen = document.getElementById('crash');
+                screen.style.display = 'block';
+                var myAudio = document.getElementById('glitch');
+                myAudio.play();
+                
+            },800)
+            
+            
+            setTimeout(function(){
+
+                var screen = document.getElementById('crash');
+                screen.style.display = 'none';
+                var glitch = document.getElementById('glitch');
+                glitch.volume = 2;
+                glitch.play();
+                
+            },8000)
+
+
+            setTimeout(function(){
+
+                location.reload();
+                
+            },7000)
+
 
         
-    </center>
+        }
+
+    </script>
+        
+        
 </body>
 </html>

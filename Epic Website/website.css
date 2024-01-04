@@ -39,11 +39,11 @@ p{
 
 .navbar{
     width: 85%;
-    margin-left: 150px;
+    margin-left: 160px;
     margin-top: 0px;
     padding: 0px 0;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
 
 }
@@ -58,7 +58,6 @@ p{
 }
 .navbar ul {
     list-style: none;
-
 }
 .navbar ul li{
     padding-top: 20px;
@@ -324,13 +323,19 @@ video{
 
 }
 
-
 footer a {
     position: absolute;
     bottom: 0%;
     right: 45%;
     color: white;
 }
+footer a:hover {
+    font-size: 115% ;
+    right: 44%;
+    animation: rainbowtext 1s infinite;
+}
+
+
 
 @keyframes starting{
 
