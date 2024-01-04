@@ -48,13 +48,21 @@ p{
 
 }
 .navbar img{
-
+    
+    position: absolute;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
     margin-top: -20px;
     padding-top: 0px;
     width : 100px; 
     cursor: pointer;
-    position: absolute;
+}
+.navbar img:hover{
+    
+    border: 1px solid white;
+    border-radius: 5px; 
+    background-color: rgb(50, 91, 180);
+    box-shadow: 0 0 15px white;
+
 }
 .navbar ul {
     list-style: none;
@@ -84,6 +92,10 @@ p{
     transition: 0.5s;
 }
 
+.navbar ul li:hover{
+    text-shadow: 0 0 5px white;
+
+}
 .navbar ul li:hover::after{
     width: 100%;
 }
@@ -207,6 +219,8 @@ th {
     cursor: pointer;
     border-radius: 2px;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(94, 93, 93);
+
 
 }
 .left_toggle .common{
