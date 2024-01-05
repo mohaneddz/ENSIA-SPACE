@@ -11,7 +11,29 @@ body{
 }
 
 
-/* Websites Gallery Layout */
+/* Websites Gallery Layout ---------------------------------------------------------------------------*/
+#clouds{
+    margin: 0px;
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    top: 0%;
+    left: 0%;
+    z-index: -3;
+    opacity: 0.9;
+
+}
+#snowy{
+    z-index: -2;
+    position: absolute;
+    top: -05%;
+    left: -05%;
+    width: 200wh;
+    height: 200vh;
+    opacity: 0.3;
+
+}
+
 .Gallery{
     display: flex;
     height: 20rem;
@@ -27,6 +49,7 @@ body{
 }
 .Gallery > a:hover{
     flex: 5;
+    filter: drop-shadow(0 0 10px white );
 }
 .home:hover{
     text-shadow: 0 0 5px white;
@@ -42,7 +65,7 @@ pre{
 }
 
 
-/* FeedBack Website */
+/* FeedBack Website ---------------------------------------------------------------------------*/
 #bugged { 
     color: red;
     font-size : 90px;
@@ -61,6 +84,18 @@ pre{
     font-size: 250px;
     font-family: 'Freehand', cursive;
 }
+#beat{
+    position: absolute;
+    bottom:-39% ;
+    right: 0%;
+    width: 25%;
+    height: 50%;
+}
+#beat:hover{
+
+    transform: translate(0, -50%);
+    filter: drop-shadow(0 0 15px yellow);
+}
 
 /* Make IT WORSE */
 #feature:hover {
@@ -72,13 +107,82 @@ pre{
 
 }
 
-/* About us */
+
+
+
+/* About us ---------------------------------------------------------------------------*/
+
+#jump{
+    z-index: 2;
+    position: absolute;
+    top: -05%;
+    left: -05%;
+    width: 150wh;
+    height: 150vh;
+    display: none;
+
+}
+#crash{
+
+    z-index: 3;
+    position: absolute;
+    top: -05%;
+    left: -05%;
+    width: 150wh;
+    height: 150vh;
+    display: none;
+
+
+}
+#black{
+
+    z-index: -1;
+    position: absolute;
+    top: -05%;
+    left: -05%;
+    width: 150wh;
+    height: 150vh;
+    animation: blacking 21s;
+
+
+}
+#Flashlight{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    box-shadow: 0 0 10px black;
+    background-color: rgba(177, 156, 156, 0.664);
+    width: 200px;
+    height:  50px;
+    z-index: 5;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 42%;
+}
+#Flashlight:hover{
+    
+    box-shadow: 0 0 15px white;
+    background-color: rgba(211, 195, 195, 0.664);
+    color: white;
+    top: 49%;
+    left: 41.5%;
+    width: 210px;
+    height:  60px;
+    
+}
+#text{
+    z-index: 5;
+    opacity: 0;
+    animation: fadingout 20s;
+}
 #error:hover{
     text-shadow: 0 0 5px white;
     color: rgb(157, 199, 238);
 }
 #warning:hover{
-    font-size: 105%;
+    font-size: 120%;
+    text-shadow: 0 0 15px rgb(58, 24, 24);
+
 }
 
 #service{
@@ -88,10 +192,44 @@ pre{
     
 }
 
-/* Services  */
+/* Services  ---------------------------------------------------------------------------*/
+    
 #service:hover{
     text-shadow: 0 0 5px rgb(42, 37, 61);
-    color: rgb(132, 132, 214);
+    color: rgb(209, 169, 36);
+}
+#joke{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 20px black;
+    color: rgb(255, 255, 255);
+}
+#joke:hover{
+    font-size: 150%;
+    transform: translate(12%, +5%);
+    color: pink;
+}
+#sad img{
+
+    filter: brightness(-50%);
+    filter: blur(5px);
+    z-index: -3;
+    position: absolute;
+    top: -05%;
+    left: -05%;
+    width: 106%;
+    height: 110vh;
+    opacity: 1;
+    animation: napon 10s;
+    
+}
+
+/* ---------------------------------------------ANIMATIONS--------------------------------------------- */
+
+@keyframes napon {
+
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+
 }
 
 @keyframes starting{
@@ -103,4 +241,36 @@ pre{
     100%{
         opacity: 100%;
     }
+}
+
+@keyframes shaker {
+    50%{transform: translate(5%, 5%);}
+
+}
+
+@keyframes jumpscare {
+    0%{opacity: 1;}
+    100%{opacity: 1;}
+}
+
+@keyframes turnoff {
+    
+    0%{brightness: 0}
+
+    100%{brightness: 0}
+}
+
+@keyframes fadingout {
+    
+    0%{opacity: 1;}
+    70%{opacity: 1;}
+    100%{opacity: 0;}
+
+}
+
+
+@keyframes blacking {
+    0%{opacity: 0;}
+    70%{opacity: 0;}
+    100%{opacity: 1;}
 }

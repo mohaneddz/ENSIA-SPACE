@@ -39,26 +39,33 @@ p{
 
 .navbar{
     width: 85%;
-    margin-left: 150px;
+    margin-left: 160px;
     margin-top: 0px;
     padding: 0px 0;
     display: flex;
-    align-items: center;
+    align-items:center;
     justify-content: space-between;
 
 }
 .navbar img{
-
+    
+    position: absolute;
     filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
     margin-top: -20px;
     padding-top: 0px;
     width : 100px; 
     cursor: pointer;
-    position: absolute;
+}
+.navbar img:hover{
+    
+    border: 1px solid white;
+    border-radius: 5px; 
+    background-color: rgb(50, 91, 180);
+    box-shadow: 0 0 15px white;
+
 }
 .navbar ul {
     list-style: none;
-
 }
 .navbar ul li{
     padding-top: 20px;
@@ -85,6 +92,10 @@ p{
     transition: 0.5s;
 }
 
+.navbar ul li:hover{
+    text-shadow: 0 0 5px white;
+
+}
 .navbar ul li:hover::after{
     width: 100%;
 }
@@ -208,6 +219,8 @@ th {
     cursor: pointer;
     border-radius: 2px;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(94, 93, 93);
+
 
 }
 .left_toggle .common{
@@ -324,13 +337,19 @@ video{
 
 }
 
-
 footer a {
     position: absolute;
     bottom: 0%;
     right: 45%;
     color: white;
 }
+footer a:hover {
+    font-size: 115% ;
+    right: 44%;
+    animation: rainbowtext 1s infinite;
+}
+
+
 
 @keyframes starting{
 
