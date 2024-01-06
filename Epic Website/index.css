@@ -32,6 +32,8 @@ section{
     border-radius: 5px;
     box-shadow: 5px 5px 25px;
     position: absolute;
+    top: 50%;
+    left: 40%;
     white-space: nowrap;
     font-size: 2rem;
     z-index: 2;
@@ -40,6 +42,9 @@ section{
 
 #play{
     text-shadow: 0 0 5px black;
+    position: absolute;
+    top: 50%;
+    left: 40%;
 }
 u  #play:hover{
     color: rgb(29, 131, 55);

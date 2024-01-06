@@ -37,14 +37,14 @@ p{
     z-index: 3;
 }
 
+/*------------------------------------------ The Navigation Top Bar ------------------------------------------*/
+
 .navbar{
     width: 85%;
-    margin-left: 160px;
     margin-top: 0px;
     padding: 0px 0;
-    display: flex;
-    align-items:center;
-    justify-content: space-between;
+    position: absolute;
+    left: 17%;
 
 }
 .navbar img{
@@ -100,7 +100,7 @@ p{
     width: 100%;
 }
 
-/* THE WELCOMING MESSAGE + THE LOGIN FORUM */
+/*------------------------------------------ THE WELCOMING MESSAGE + THE LOGIN FORUM ------------------------------------------*/
 
 .welcome {
     width: 100%;
@@ -145,7 +145,8 @@ th {
     line-height: 25px;
 }
 
-/* THE LEFT SIDEBAR! */
+/*------------------------------------------ THE LEFT SIDEBAR ------------------------------------------*/
+
 
 .left {
     z-index: 1;
@@ -164,12 +165,13 @@ th {
 
     text-decoration: none;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: auto;
     color: rgb(1, 20, 82);
     font-weight: 800;
     text-align: right;
-    padding-right: 20%;
+    padding-right: 5%;
     padding-top: 0%;
+    padding-bottom: 10%;
     pointer-events: none;
 }
 .left #menu{
@@ -203,7 +205,8 @@ th {
     margin-top: -10px;
 }
 
-/* Toggle Button */
+/*------------------------------------------ THE Toggle Button ------------------------------------------*/
+
 
 #slide{
     display: none;
