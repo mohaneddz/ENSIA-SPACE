@@ -14,6 +14,8 @@ body{
     animation: turning_red 30s cubic-bezier(0.42, 0, 0.58, 1) ;
 
 }
+
+
 section{
 
     height: 100vh;
@@ -47,9 +49,9 @@ section{
     left: 40%;
 }
 u  #play:hover{
-    color: rgb(29, 131, 55);
+    color: rgb(227, 231, 13);
     text-decoration: underline;
-    text-decoration-color :rgb(29, 131, 55);
+    text-decoration-color :rgb(238, 255, 4);
     animation-name: shaking ;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;

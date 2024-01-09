@@ -55,6 +55,7 @@ p{
     padding-top: 0px;
     width : 100px; 
     cursor: pointer;
+    
 }
 .navbar img:hover{
     
@@ -259,6 +260,7 @@ th {
 }
 
 /* Animation When Clicked ! */
+
 input:checked ~ .left_toggle .top_line{
 
     left: 2px;

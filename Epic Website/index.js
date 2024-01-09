@@ -3,8 +3,6 @@ const TOOCLOSE = 100
 
 // If there is a problem use : console.log(x, y)
 
-
-
 badbutton.addEventListener('click', () => {
 
     // Guess he found out that he can TAB Lmao
@@ -17,6 +15,7 @@ function distancefrombuttoncenter(boxPosition, mousePosition, boxSize){
     //EZ : Calc distance of mouse and Button
     return boxPosition - mousePosition + boxSize / 2
 }
+
 document.addEventListener('mousemove', (e) => {
 
     // Position Of Mouse X/Y
@@ -64,6 +63,7 @@ function setButtonPosition(left , top){
 
     // Might Clip into the void lmao
     // We Gotta sent that the other way around then :/
+
     if(distancefrombuttoncenter(left, windowBox.left, buttonBox.width) < 0 ){
         left = windowBox.right - buttonBox.width - TOOCLOSE
     }
@@ -82,7 +82,7 @@ function setButtonPosition(left , top){
 
 }
 
-// Parallax EFFECT
+// Parallax EFFECT---------------------------------------------------------------
 
 const parallax = document.querySelector('.parallax');
 const front = document.querySelector('.front');
@@ -111,7 +111,7 @@ function updateElapsedTime() {
 }
 
 setInterval(updateElapsedTime, 1000);
-
+    
 window.addEventListener('beforeunload', () => {
     updateElapsedTime();
 });

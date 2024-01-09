@@ -1,0 +1,9 @@
+div{
+    background-color: red;
+    display: inline-block;
+}
+div:hover{
+
+    border: black;
+    background-color: blue;
+}
