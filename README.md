@@ -1,7 +1,7 @@
 Quick Run-Through :   
 
 ------
-* Make sure to open the entire folder with Vs Code , and that it is nor on Safe Mode, in order for the images to run
+* Make sure to open the entire folder with Vs Code , and that it is NOT ON SAFE MODE (Trust The Folder Option) , in order for the images to run
 ------
 
 1-Open the Index.Html File (From the Epic Website Folder) with you Live Server Extention.   
