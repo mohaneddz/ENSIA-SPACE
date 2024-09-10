@@ -1,4 +1,4 @@
-# ENSIA Space [ Meme Webstie Project ]!
+# ENSIA Space [ Meme Webstie Project ]
 
 **A Fun and Playful Exploration of Web Development**
 
